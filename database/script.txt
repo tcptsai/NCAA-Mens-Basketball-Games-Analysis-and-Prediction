@@ -1,0 +1,109 @@
+.open ncaa.db3
+
+.mode csv
+
+CREATE TABLE AllGamesDetailed(
+   season INT,
+   date TEXT,
+   id1 TEXT,
+   id2 TEXT,
+   score1 INT,
+   score2 INT,
+   type TEXT,
+   field TEXT
+);
+
+.import ../scrapping/AllGamesDetailed/AllGamesDetailed.txt AllGamesDetailed
+
+SELECT *
+FROM AllGamesDetailed;
+
+CREATE TABLE AllTeamsConfTotal(
+   season INT,
+   id TEXT,
+   g INT,
+   mp INT,
+   fg INT,
+   fga INT,
+   fgp DECIMAL,
+   twp INT,
+   twpa INT,
+   twpp DECIMAL,
+   thp INT,
+   thpa INT,
+   thpp DECIMAL,
+   ft INT,
+   fta INT,
+   ftp DECIMAL,
+   orb INT,
+   drb INT,
+   trb INT,
+   ast INT,
+   stl INT,
+   blk INT,
+   tov INT,
+   pf INT,
+   pts INT,
+   ptsg DECIMAL,
+   opp_g INT,
+   opp_mp INT,
+   opp_fg INT,
+   opp_fga INT,
+   opp_fgp DECIMAL,
+   opp_twp INT,
+   opp_twpa INT,
+   opp_twpp DECIMAL,
+   opp_thp INT,
+   opp_thpa INT,
+   opp_thpp DECIMAL,
+   opp_ft INT,
+   opp_fta INT,
+   opp_ftp DECIMAL,
+   opp_orb INT,
+   opp_drb INT,
+   opp_trb INT,
+   opp_ast INT,
+   opp_stl INT,
+   opp_blk INT,
+   opp_tov INT,
+   opp_pf INT,
+   opp_pts INT,
+   opp_ptsg DECIMAL
+);
+
+.import ../scrapping/AllTeamsConfTotal/AllTeamsConfTotal.txt AllTeamsConfTotal
+
+SELECT *
+FROM AllTeamsConfTotal;
+
+CREATE TABLE AllPlayersAverage(
+   season INT,
+   schoolid TEXT,
+   playerid TEXT,
+   g INT,
+   mp DECIMAL,
+   fg DECIMAL,
+   fga DECIMAL,
+   fgp DECIMAL,
+   twp DECIMAL,
+   twpa DECIMAL,
+   twpp DECIMAL,
+   thp DECIMAL,
+   thpa DECIMAL,
+   thpp DECIMAL,
+   ft DECIMAL,
+   fta DECIMAL,
+   ftp DECIMAL,
+   trb DECIMAL,
+   ast DECIMAL,
+   stl DECIMAL,
+   blk DECIMAL,
+   tov DECIMAL,
+   pf DECIMAL,
+   pts DECIMAL
+);
+
+.import ../scrapping/AllPlayersAverage/AllPlayersAverage.txt AllPlayersAverage
+
+SELECT *
+FROM AllPlayersAverage;
